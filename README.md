@@ -1,15 +1,18 @@
-# Test Video Repo
+# Test Media Video Repo
 
 The test videos contained herein are shortened, clipped versions intended for quick testing with media-based services and components.
 
 # Attribution
 
-Tears of Steel media Adapted under [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license. (CC) Blender Foundation | [http://mango.blender.org](mango.blender.org)
+[Tears of Steel](http://mango.blender.org) media Adapted under [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license. (CC) Blender Foundation | [http://mango.blender.org](http://mango.blender.org)
 
 # Sample videos
 
-## ToS-4k-1920-s05m-d10s.mov ffprobe
+## Tears of Steel
 
+### ffprobe ToS-4k-1920-s05m-d10s.mov 
+
+```
 Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'ToS-4k-1920-s05m-d10s.mov':
   Metadata:
     major_brand     : qt  
@@ -24,9 +27,11 @@ Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'ToS-4k-1920-s05m-d10s.mov':
     Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 186 kb/s (default)
     Metadata:
       handler_name    : DataHandler
+```
 
-## tears_of_steel_1080p-s05m-d10s.mov ffprobe
+### ffprobe tears_of_steel_1080p-s05m-d10s.mov 
 
+```
 Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'tears_of_steel_1080p-s05m-d10s.mov':
   Metadata:
     major_brand     : qt  
@@ -41,3 +46,4 @@ Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'tears_of_steel_1080p-s05m-d10s.mov':
     Stream #0:1(eng): Audio: mp3 (.mp3 / 0x33706D2E), 44100 Hz, stereo, s16p, 191 kb/s (default)
     Metadata:
       handler_name    : DataHandler
+```
