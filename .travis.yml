@@ -1,0 +1,17 @@
+sudo: required
+language: bash
+services: docker
+
+env:
+  global:
+    - MEDIA=tos-6705k-h264-yuv420p-1920x800-24fps-mp3-44100s.mov IMAGE=ffmpeg
+    - MEDIA=tos-8434k-h264-yuv420p-1920x800-24fps-aac-44100s.mov IMAGE=ffmpeg
+    
+jobs:
+  include:
+    - stage: test media
+      script:
+      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+      - docker run -it --entrypoint "ffprobe" docker run $DOCKER_USERNAME/$IMAGE https://raw.githubusercontent.com/sitkevij/test-media/master/media/$MEDIA
+      # - docker run $DOCKER_USERNAME/$IMAGE -i https://raw.githubusercontent.com/sitkevij/test-media/master/media/$MEDIA -c:v libx265 -c:a mp3 - > libx265-$MEDIA.mp4
+      # - docker run sitkevij/ffmpeg -i https://raw.githubusercontent.com/sitkevij/test-media/master/media/tos-6705k-h264-yuv420p-1920x800-24fps-mp3-44100s.mov -c:v libx265 -c:a mp3 - > hevc-test1.mp4
