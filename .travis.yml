@@ -11,6 +11,7 @@ jobs:
   include:
     - stage: test media
       script:
-      - docker run -it --entrypoint "ffprobe" docker run sitkevij/$IMAGE https://raw.githubusercontent.com/sitkevij/test-media/master/media/$MEDIA
+      - docker pull sitkevij/$IMAGE
+      - docker run -it --entrypoint "ffprobe" sitkevij/$IMAGE https://raw.githubusercontent.com/sitkevij/test-media/master/media/$MEDIA
       # - docker run $DOCKER_USERNAME/$IMAGE -i https://raw.githubusercontent.com/sitkevij/test-media/master/media/$MEDIA -c:v libx265 -c:a mp3 - > libx265-$MEDIA.mp4
       # - docker run sitkevij/ffmpeg -i https://raw.githubusercontent.com/sitkevij/test-media/master/media/tos-6705k-h264-yuv420p-1920x800-24fps-mp3-44100s.mov -c:v libx265 -c:a mp3 - > hevc-test1.mp4
