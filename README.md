@@ -2,6 +2,8 @@
 
 The test videos contained herein are shortened, clipped versions intended for quick testing with media-based services and components.
 
+[![build](https://travis-ci.org/sitkevij/test-media.svg?branch=master)](https://travis-ci.org/sitkevij/test-media)
+
 # Attribution
 
 [Tears of Steel](http://mango.blender.org) media Adapted under [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license. (CC) Blender Foundation | [http://mango.blender.org](http://mango.blender.org)
